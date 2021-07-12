@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "DNA Playground",
+    "description": "Upload a DNA sequence. See what happens!",
     "version": "1.0.0"
   },
-  "host": "3000-lavender-moose-4g4y2m98.ws-eu11.gitpod.io",
+  "host": "3000-beige-salmon-xzm6vc5n.ws-eu11.gitpod.io",
   "basePath": "/",
   "tags": [],
   "schemes": [

@@ -7,6 +7,7 @@ const dnaRoutes = require('./dna');
 
 // Create our app
 const app = express();
+// app.use(express.json());
 
 
 // Setup routes

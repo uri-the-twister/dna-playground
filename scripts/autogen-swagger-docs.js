@@ -2,10 +2,10 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Description',
+    title: 'DNA Playground',
+    description: 'Upload a DNA sequence. See what happens!',
   },
-  host: '3000-lavender-moose-4g4y2m98.ws-eu11.gitpod.io',
+  host: '3000-beige-salmon-xzm6vc5n.ws-eu11.gitpod.io',
   schemes: ['https'],
 };
 

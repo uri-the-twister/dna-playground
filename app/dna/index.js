@@ -1,7 +1,7 @@
 const express = require('express');
 const api = express.Router();
 
-// Load our pre-configured sequences (hard coded in this playground)
+// Load our pre-configured sequences
 const sequences = require('./sequences');
 
 
