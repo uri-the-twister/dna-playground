@@ -1,13 +1,7 @@
-image:
-  file: .gitpod.dockerfile
-
 tasks:
-  - init: |
-      npm install
-      npm run build
-      mkdir -p /workspace/data && mongod --dbpath /workspace/data
+  - init: npm run build
     command: npm run server
-
+    
 ports:
   - port: 3000
     onOpen: open-preview
