@@ -1,0 +1,29 @@
+{
+  "name": "dna-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "docs": "node scripts/autogen-swagger-docs.js",
+    "start": "node app/index.js",
+    "watch": "nodemon --watch app -e js -x \"npm run docs && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uri-the-twister/dna-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uri-the-twister/dna-playground/issues"
+  },
+  "homepage": "https://github.com/uri-the-twister/dna-playground#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "logzio-nodejs": "^2.0.2",
+    "nodemon": "^2.0.12",
+    "swagger-autogen": "^2.10.4",
+    "swagger-ui-express": "^4.1.6"
+  }
+}

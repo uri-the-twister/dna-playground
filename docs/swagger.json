@@ -1,0 +1,51 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "3000-lavender-moose-4g4y2m98.ws-eu11.gitpod.io",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/api/dna/": {
+      "get": {
+        "tags": [],
+        "summary": "Get all the DNA sequences",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "tags": [],
+        "summary": "Save a new DNA Sequence on the server",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/api/dna/{id}": {
+      "get": {
+        "tags": [],
+        "summary": "Get a DNA Sequence by id",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {}
+}
