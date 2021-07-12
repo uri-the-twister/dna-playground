@@ -1,7 +1,6 @@
 tasks:
-  - name: Install dependencies
-    init: npm install
-    command: echo "hello uri"
+    - init: echo "hello init"
+      command: echo "hello uri"
     
 ports:
   - port: 3000
