@@ -43,7 +43,11 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          }
+        }
       }
     }
   },
