@@ -7,12 +7,8 @@ tasks:
         npm run docs
         npm run watch
 
-    - command: mkdir -p /workspace/data && mongod --dbpath /workspace/data --bind_ip 0.0.0.0
+    - command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
     
 ports:
   - port: 3000
-    onOpen: open-preview
-
-  - port: 27017
-    visibility: public
-
+    onOpen: ignore
