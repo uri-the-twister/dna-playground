@@ -1,12 +1,7 @@
-image:
-    file: .gitpod.dockerfile
-
 tasks:
   - name: Install dependencies
     init: npm install
-  
-  - name: Run
-    command: npm run watch
+    command: echo "hello uri"
     
 ports:
   - port: 3000
