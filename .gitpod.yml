@@ -14,4 +14,3 @@ ports:
     onOpen: open-preview
     
     - port: 27017
-      onOpen: open-preview
