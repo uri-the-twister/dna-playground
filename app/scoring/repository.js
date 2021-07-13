@@ -10,7 +10,7 @@ module.exports = {
         return scores.find(x => x.id === id);
     },
 
-    scoreSequenceById(seqId) {
+    addScoreJobForSeqId(seqId) {
         const nextId = 'Score-Job-' + (scores.length + 1);
         
         scores.push({
@@ -22,5 +22,10 @@ module.exports = {
 
         return nextId;
     },
+
+    updateResultByJobId(newScoreJobId, result) {
+        const scoreJob = scores.find(x => x.id === newScoreJobId);
+        scoreJob.score = result;
+    }
 };
 
