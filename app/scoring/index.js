@@ -1,6 +1,7 @@
 const express = require('express');
 const api = express.Router();
 
+const logger = require('../utils/logger');
 const validations = require('./validations');
 const service = require('./service');
 
@@ -50,6 +51,10 @@ api.post('/', (req, res) => {
         });
     }
     catch (e) {
+        logger.log(`[scoring-controller]: ${e.msg}`, {
+            requestPayload: req.body
+        });
+
         res.json({
             message: e.message,
             data: null
