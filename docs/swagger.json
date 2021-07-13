@@ -26,7 +26,20 @@
         "tags": [],
         "summary": "Save a new DNA Sequence on the server",
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "seq": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {}
       }
     },
@@ -34,6 +47,68 @@
       "get": {
         "tags": [],
         "summary": "Get a DNA Sequence by id",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/scoring/": {
+      "get": {
+        "tags": [],
+        "summary": "Get all the scores",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "tags": [],
+        "summary": "Score a sequence by it",
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sequenceId": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/scoring/{id}": {
+      "get": {
+        "tags": [],
+        "summary": "Get a score by job id",
         "description": "",
         "parameters": [
           {

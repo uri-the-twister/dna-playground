@@ -6,25 +6,25 @@ const service = require('./service');
 
 
 api.get('/', (req, res) => {
-    // #swagger.summary = 'Get all the DNA sequences'
+    // #swagger.summary = 'Get all the scores'
 
-    const sequences = service.getAllSequences()
+    const scores = service.getAllScores()
 
     res.json({
         message: 'success',
-        data: sequences
+        data: scores
     });
 });
 
 api.get('/:id', (req, res) => {
-    // #swagger.summary = 'Get a DNA Sequence by id'
+    // #swagger.summary = 'Get a score by job id'
 
 
-    const requestedSequence = service.getSequenceById(req.params.id);
-    if (requestedSequence) {
+    const requestedScore = service.getScoreById(req.params.id);
+    if (requestedScore) {
         res.json({
             message: 'success',
-            data: requestedSequence
+            data: requestedScore
         });
     }
     else {
@@ -36,16 +36,16 @@ api.get('/:id', (req, res) => {
 });
 
 api.post('/', (req, res) => {
-    // #swagger.summary = 'Save a new DNA Sequence on the server'
+    // #swagger.summary = 'Score a sequence by it's Seq-Id'
 
     try {
-        validations.validateSequence(req.body);
-        const newSeqId = service.addSequence(req.body.seq);
+        validations.validateSequenceId(req.body);
+        const newScoreJobId = service.scoreSequenceById(req.body.sequenceId);
 
         res.json({
-            message: 'success',
+            message: 'started',
             data: {
-                id: newSeqId
+                id: newScoreJobId
             }
         });
     }
@@ -55,15 +55,6 @@ api.post('/', (req, res) => {
             data: null
         });
     }
-});
-
-api.delete('/:id', (req, res) => {
-    service.removeSequenceById(req.params.id);
-
-    res.json({
-        message: 'success',
-        data: 'null'
-    });
 });
 
 module.exports = api;

@@ -3,15 +3,17 @@ const swaggerUi = require('swagger-ui-express');
 
 const logger = require('./utils/logger');
 const dnaRoutes = require('./dna');
+const scoring = require('./scoring');
 
 
 // Create our app
 const app = express();
-// app.use(express.json());
+app.use(express.json());
 
 
 // Setup routes
 app.use('/api/dna', dnaRoutes);
+app.use('/api/scoring', scoring);
 
 
 // Swagger Setup

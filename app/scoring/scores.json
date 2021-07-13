@@ -1,0 +1,15 @@
+[
+    {
+        "id": "Score-Job-1",
+        "seqId": "Seq-1",
+        "score": "Good",
+        "createdAt": 1626157421727
+    },
+
+    {
+        "id": "Score-Job-2",
+        "seqId": "Seq-2",
+        "score": "Good",
+        "createdAt": 1626157421727
+    }
+]
