@@ -17,6 +17,30 @@ api.get('/', (req, res) => {
     });
 });
 
+api.post('/filter', (req, res) => {
+    // #swagger.summary = 'Get all the DNA sequences based on some filter'
+
+    try {
+        validations.validateFilter(req.body);
+        const sequences = service.getAllSequencesByFilter(req.body.filter);
+
+        res.json({
+            message: 'success',
+            data: sequences
+        });
+    }
+    catch (e) {
+        logger.log(`[dna-controller]: ${e.msg}`, {
+            requestPayload: req.body
+        });
+        
+        res.json({
+            message: e.message,
+            data: null
+        });
+    }
+});
+
 api.get('/:id', (req, res) => {
     // #swagger.summary = 'Get a DNA Sequence by id'
 

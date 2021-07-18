@@ -7,6 +7,13 @@ module.exports = {
         return repository.getAllSequences();
     },
 
+    getAllSequencesByFilter(filter) {
+        logger.log(`[dna-service]: getting all sequences by filter "${JSON.stringify(filter)}"`);
+        return repository.getAllSequences().filter(
+            x => filter.includes(x.id)
+        );
+    },
+
     getSequenceById(id) {
         logger.log(`[dna-service]: getting sequence by id "${id}"`);
         return repository.getSequenceById(id);

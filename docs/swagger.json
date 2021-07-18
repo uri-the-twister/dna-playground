@@ -43,6 +43,28 @@
         "responses": {}
       }
     },
+    "/api/dna/filter": {
+      "post": {
+        "tags": [],
+        "summary": "Get all the DNA sequences based on some filter",
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "filter": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
     "/api/dna/{id}": {
       "get": {
         "tags": [],

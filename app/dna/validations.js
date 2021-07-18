@@ -14,5 +14,19 @@ module.exports = {
 
         if (/^[atgc]+$/i.test(payload.seq) === false)
             throw new Error("Invalid sequence (can only include A,T,G,C)");
+    },
+
+    validateFilter(payload) {
+        if (!payload)
+            throw new Error("Missing payload")
+
+        if (!payload.filter)
+            throw new Error("Missing filter in payload");
+
+        if (Array.isArray(payload.filter) === false)
+            throw new Error("Filter must be an array of sequence-ids");
+
+        if (payload.filter.length === 0)
+            throw new Error("Filter cannot be empty");
     }
 };

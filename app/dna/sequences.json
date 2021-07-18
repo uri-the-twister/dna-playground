@@ -7,5 +7,15 @@
     {
         "id": "Seq-2",
         "seq": "CCGGTTAACGTA"
+    },
+
+    {
+        "id": "Seq-3",
+        "seq": "CCGGTTAACGTATAACGTA"
+    },
+
+    {
+        "id": "Seq-4",
+        "seq": "ATTGGCCATTGGCCCCGGTTAACGTA"
     }
 ]
